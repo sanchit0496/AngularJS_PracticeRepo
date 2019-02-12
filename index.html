@@ -1,0 +1,275 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!--
+<div ng-app="">
+  <p>Enter the Value Here: <br><br> <input type="text" ng-model="value"></p>
+  <p ng-bind="value"></p>
+</div>-->
+
+<!--<div ng-app="">
+  <p>The sum is: {{5+5}}</p>
+</div>-->
+
+<!--
+<div ng-app="">
+  <p>The mathematical relation is of multiplication <br> {{10*10}} </p>
+</div>-->
+<!--
+<div ng-app="">
+  <p> Type Here: <br><br> <input type= "text" ng-model="value"> </p>
+<p>{{value}}</p>
+</div>-->
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}</div>-->
+
+<!--
+<div ng-app="" ng-init = "fname='Dude';rollno='32'">
+ <p>Name: <input type="text" ng-model="fname"> </p>
+  <p>Roll Number: <input type="text" ng-model="rollno"> </p>
+  
+  <p>The name is {{fname}}</p>
+  <p>The roll number is {{rollno}}</p>
+</div>-->
+
+<!--
+<div ng-app="" ng-init="quantity = 5; rate = 20" >
+  
+  <p>Quantity: <input type="text" ng-model="quantity"> </p>
+  <p> Rate: <input type="text" ng-model="rate"> </p>
+  <p></p>
+  <p>The total cost is: {{quantity * rate}}</p>
+</div>
+-->
+
+<!--
+<div ng-app="" ng-init= "words =['Hello','There','Hey','AngularJS']">
+  
+  <ul>
+    <li ng-repeat = "x in words">
+      {{x}}
+    </li>
+  </ul>
+  
+</div>-->
+
+
+<!-- check this code chunk
+<div ng-app="" ng-init = "names = [{name:'n1',country:'c1'},{name:'n1',country:'c1'}]">
+  
+  <ul>
+    <li ng-repeat = "x in names"> 
+      {{ names.name + ', ' + names.country }} 
+    </li>
+  </ul>
+</div>-->
+
+<!--
+<div ng-app="" ng-init="names=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+
+</div>-->
+
+<!--
+<div ng-app="" ng-init="term = ['Hello']">
+  <p><input type="text" ng-model="term"></p>
+  <p>{{name}}</p>
+</div>
+-->
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+  Name: <input ng-model="name">
+  <p><h1>You entered {{name}}</h1></p>
+</div>
+-->
+
+
+<!--for checking if the email is in correct form
+<form ng-app="" name="checkForm">
+  
+  <input type="email" name="emailAddress" ng-model="text"><br>
+  <span ng-show="checkForm.emailAddress.$error.email">Email format is invalid</span>
+  
+  <p>Enter your e-mail address in the input field. AngularJS will display an errormessage if the address is not an e-mail.</p>
+  
+</form> -->
+
+<!--
+<div>
+  
+  <form ng-app="" name = "checkForm" ng-init = "emailid = 'something@something.com'">
+  <p> <input type='email' ng-model = 'emailid'> <br> Enter the Email ID to check </p>
+  <h1> Email Checker</h1>
+    
+    <p>Valid: {{checkForm.emailid.$valid}} (If true, the email provided is valid)</p>
+    <p>Dirty: {{checkForm.emailid.$dirty}} (If true, the email provided has been changed)</p>
+    <p>Touched: {{checkForm.emailid.$touched}} (If true, the field has been in focus.)</p>
+  </form>
+  
+</div>
+--->
+
+<!--
+<div ng-app = 'myApp' ng-controller = 'namePrint'>
+  
+  <p>Enter the first name: <input ng-model = 'firstName'></p>
+  <p>Enter the last name: <input ng-model = 'secondName'></p><br><br>
+  <p>The full name is: {{fullName()}}</p>
+</div>
+-->
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+  <h1>{{carname}}</h1>
+</div>
+-->
+
+<!--
+<div ng-app="myApp" ng-controller="fruit">
+  <h1>{{fruitname}}</h1>
+</div>
+-->
+
+<!--
+<div ng-app="myApp" ng-controller="fruit">
+  
+  <ul>
+  <li ng-repeat = 'x in fruitnames'>
+    {{x}} x should be written here and not fruitnames
+   </li>
+  </ul>
+  
+</div> -->
+
+<!--
+<body ng-app = "myApp">
+  
+  <p>The fav color of the rootscope is:</p> <br>
+  <h1>{{color}}</h1>
+  
+  <div ng-controller = 'myCtrl'>
+    <p>The fav color of the controller is:</p><br>
+    <h1>{{color}}</h1>
+  </div>
+  
+  <p>The fav color of the rootscope is still:</p><br>
+  <h1>{{color}}</h1>
+  
+</body>
+-->
+
+
+
+<!--
+<div ng-app='myApp' ng-controller = 'nameFormat'>
+  <p> The name in lowercase:
+  {{name | lowercase}}
+  </p>
+   <p> The name in uppercase:
+  {{name | uppercase}}
+  </p>
+</div>
+-->
+
+
+<!--
+<div ng-app = 'myApp' ng-controller = 'information'>
+  
+  <ul>
+    <li ng-repeat = "x in names | orderBy:'country'">
+      {{x.name + ', ' +  x.country}}
+    </li>
+  </ul>
+  
+</div>
+-->
+<!-- disappearing texts if not found in the list
+<div ng-app = 'myApp' ng-controller = 'control'>
+  
+  <p>Type a letter in the input field:</p>
+  
+ <p><input type="text" ng-model='testing'></p>
+  
+  <ul>
+    
+    <li ng-repeat = 'x in names | filter:testing'>
+      {{x}}
+    </li>
+    
+  </ul>
+  
+</div>
+-->
+
+
+<!--
+<div ng-app = 'myApp' ng-controller = 'orderBy'>
+  
+  <table border="1" width="100%">
+<tr>
+<th ng-click="orderByMe('name')">Name</th>
+<th ng-click="orderByMe('country')">Country</th>
+</tr>
+<tr ng-repeat="x in names | orderBy:myOrderBy">
+<td>{{x.name}}</td>
+<td>{{x.country}}</td>
+</tr>
+</table>
+  
+</div>
+-->
+
+
+<!--
+<ul ng-app = 'myApp' ng-controller='func'>
+  
+  <ul>
+    <li ng-repeat = 'x in names'>
+      {{x | myFormat}}
+    </li>
+  </ul>
+  
+</ul>
+
+-->
+
+<!-- wont work unless some data is retrieved from the server through the request
+<div ng-app='myApp'
+ng-controller = 'function'>
+  
+  
+  <p>Today's welcome message is:</p>
+  
+  <h1>{{welcome_message}}</h1>
+  
+</div>
+-->
+
+
+<!--
+<div ng-app='myApp' ng-controller = 'conr'>
+  
+<p>Change of header content of the webpage after the desired interval</p>  
+
+  <h1>{{myHeader}}</h1>
+
+</div>
+-->
+
+<div ng-app = 'myApp' ng-controller = 'cont'>
+  
+  <h1>{{current_time}}</h1>
+  
+</div>
