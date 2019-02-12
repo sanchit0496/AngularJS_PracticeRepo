@@ -1,0 +1,21 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<div ng-app = 'myApp' ng-controller = 'cont'>
+  
+  <h1>{{current_time}}</h1>
+  
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('cont', function($scope, $interval){
+  
+  
+  $scope.current_time = new Date().toLocaleTimeString();
+  $interval(function(){
+    $scope.current_time = new Date().toLocaleString();
+  },1000);
+  
+  
+});
+</script>
