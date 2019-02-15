@@ -1,0 +1,15 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<div ng-controller="MyCtrl">
+    <input type="text" ng-model="telephone[0]" />
+    <input type="text" ng-model="telephone[1]" />
+    <div>{{telephone}}</div>
+</div>
+
+<script>
+var app = angular.module("myApp", [])
+app.controller("MyCtrl", ['$scope', function ($scope) {
+    $scope.telephone = [];
+}]);
+</script>
